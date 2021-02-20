@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Decrypt large secret
-        run: echo $ALESSANDRO
+        run: echo ${{secrets.ALESSANDRO}}
         env: 
           ALESSANDRO: ${{ secrets.ALESSANDRO }}
         #run: gpg --quiet --batch --yes --decrypt --passphrase="u7QpAu7m" --output test.txt test.txt.gpg
