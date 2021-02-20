@@ -4,6 +4,10 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
+      - name: fim
+        run: ./decrypt_secret.sh
+      - name : aaaa
+        run: cat test.txt
       - name: Test
         run: |
           if [ "$CANDY_SECURE" == "candy" ]
@@ -15,5 +19,6 @@ jobs:
             echo "Got secret something else"
           fi
         env: 
+          ALE: ${{ secrets.ALE }}
           CANDY_SECURE: ${{ secrets.CANY_APPLE_SECURE }}
           PEAR_SECURE: ${{ secrets.PEAR_MAGIC_SECURE }}
