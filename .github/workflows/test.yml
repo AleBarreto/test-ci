@@ -9,9 +9,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Decrypt large secret
-        run: echo $LARGE_SECRET_PASSPHRASE
+        run: echo $ALESSANDRO
         env: 
-          LARGE_SECRET_PASSPHRASE: ${{ secrets.LARGE_SECRET_PASSPHRASE }}
+          ALESSANDRO: ${{ secrets.ALESSANDRO }}
         #run: gpg --quiet --batch --yes --decrypt --passphrase="u7QpAu7m" --output test.txt test.txt.gpg
         
       # This command is just an example to show your secret being printed
