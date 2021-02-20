@@ -11,7 +11,7 @@ jobs:
       - name: Decrypt large secret
         run: |
           echo ALESSANDRO=${{ secrets.ALESSANDRO }} >> ale.txt
-          cat alex.txt
+          cat ale.txt
         env: 
           ALESSANDRO: ${{ secrets.ALESSANDRO }}
         #run: gpg --quiet --batch --yes --decrypt --passphrase="u7QpAu7m" --output test.txt test.txt.gpg
